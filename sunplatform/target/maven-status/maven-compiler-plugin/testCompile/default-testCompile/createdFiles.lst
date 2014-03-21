@@ -1,0 +1,15 @@
+com\sunnus\sunplatform\functional\gui\RegisterFT.class
+com\sunnus\sunplatform\functional\gui\UserAdminFT.class
+com\sunnus\sunplatform\functional\gui\TaskGuiFT.class
+com\sunnus\sunplatform\QuickStartServer.class
+com\sunnus\sunplatform\functional\gui\SecurityFT.class
+com\sunnus\sunplatform\repository\JpaMappingTest.class
+com\sunnus\sunplatform\service\account\AccountServiceTest.class
+com\sunnus\sunplatform\functional\rest\TaskRestFT$TaskList.class
+com\sunnus\sunplatform\repository\TaskDaoTest.class
+com\sunnus\sunplatform\data\UserData.class
+com\sunnus\sunplatform\functional\BaseSeleniumTestCase.class
+com\sunnus\sunplatform\functional\rest\TaskRestFT.class
+com\sunnus\sunplatform\data\TaskData.class
+com\sunnus\sunplatform\functional\BaseFunctionalTestCase.class
+com\sunnus\sunplatform\functional\gui\ProfileFT.class
