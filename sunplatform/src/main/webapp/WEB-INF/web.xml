@@ -77,6 +77,15 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>ZTreeServlet</servlet-name>
+        <servlet-class>com.sunnus.sunplatform.component.ztree.ZTreeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ZTreeServlet</servlet-name>
+        <url-pattern>/ztreeServlet</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>springServlet</servlet-name>
         <url-pattern>/</url-pattern>
