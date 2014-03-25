@@ -1,115 +1,119 @@
 /*******************************************************************************
  * Copyright (c) 2005, 2014 springside.github.io
- *
  * Licensed under the Apache License, Version 2.0 (the "License");
  *******************************************************************************/
 package com.sunnus.sunplatform.entity;
 
-import java.util.Date;
-import java.util.List;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Transient;
-
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.common.collect.ImmutableList;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.hibernate.validator.constraints.NotBlank;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.common.collect.ImmutableList;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "sp_user")
 public class User extends IdEntity {
-	private String loginName;
-	private String name;
-	private String plainPassword;
-	private String password;
-	private String salt;
-	private String roles;
-	private Date registerDate;
 
-	public User() {
-	}
+    private String loginName;
 
-	public User(Long id) {
-		this.id = id;
-	}
+    private String name;
 
-	@NotBlank
-	public String getLoginName() {
-		return loginName;
-	}
+    private String plainPassword;
 
-	public void setLoginName(String loginName) {
-		this.loginName = loginName;
-	}
+    private String password;
 
-	@NotBlank
-	public String getName() {
-		return name;
-	}
+    private String salt;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private String roles;
 
-	// 不持久化到数据库，也不显示在Restful接口的属性.
-	@Transient
-	@JsonIgnore
-	public String getPlainPassword() {
-		return plainPassword;
-	}
+    private Date registerDate;
 
-	public void setPlainPassword(String plainPassword) {
-		this.plainPassword = plainPassword;
-	}
+    public User() {
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public User(Long id) {
+        this.id = id;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    @NotBlank
+    public String getLoginName() {
+        return loginName;
+    }
 
-	public String getSalt() {
-		return salt;
-	}
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
 
-	public void setSalt(String salt) {
-		this.salt = salt;
-	}
+    @NotBlank
+    public String getName() {
+        return name;
+    }
 
-	public String getRoles() {
-		return roles;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setRoles(String roles) {
-		this.roles = roles;
-	}
+    // 不持久化到数据库，也不显示在Restful接口的属性.
+    @Transient
+    @JsonIgnore
+    public String getPlainPassword() {
+        return plainPassword;
+    }
 
-	@Transient
-	@JsonIgnore
-	public List<String> getRoleList() {
-		// 角色列表在数据库中实际以逗号分隔字符串存储，因此返回不能修改的List.
-		return ImmutableList.copyOf(StringUtils.split(roles, ","));
-	}
+    public void setPlainPassword(String plainPassword) {
+        this.plainPassword = plainPassword;
+    }
 
-	// 设定JSON序列化时的日期格式
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+08:00")
-	public Date getRegisterDate() {
-		return registerDate;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setRegisterDate(Date registerDate) {
-		this.registerDate = registerDate;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	@Override
-	public String toString() {
-		return ToStringBuilder.reflectionToString(this);
-	}
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    @Transient
+    @JsonIgnore
+    public List<String> getRoleList() {
+        // 角色列表在数据库中实际以逗号分隔字符串存储，因此返回不能修改的List.
+        return ImmutableList.copyOf(StringUtils.split(roles, ","));
+    }
+
+    // 设定JSON序列化时的日期格式
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+08:00")
+    public Date getRegisterDate() {
+        return registerDate;
+    }
+
+    public void setRegisterDate(Date registerDate) {
+        this.registerDate = registerDate;
+    }
+
+    @Override
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this);
+    }
 }
