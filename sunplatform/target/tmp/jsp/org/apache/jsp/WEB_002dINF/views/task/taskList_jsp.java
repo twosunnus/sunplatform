@@ -72,45 +72,49 @@ public final class taskList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
-      out.write("\t<title>任务管理</title>\r\n");
+      out.write("    <title>任务管理</title>\r\n");
       out.write("</head>\r\n");
       out.write("\r\n");
       out.write("<body>\r\n");
-      out.write("\t");
       if (_jspx_meth_c_if_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\t<div class=\"row\">\r\n");
-      out.write("\t\t<div class=\"span4 offset7\">\r\n");
-      out.write("\t\t\t<form class=\"form-search\" action=\"#\">\r\n");
-      out.write("\t\t\t\t<label>名称：</label> <input type=\"text\" name=\"search_LIKE_title\" class=\"input-medium\" value=\"");
+      out.write("<div class=\"row\">\r\n");
+      out.write("    <div class=\"span4 offset7\">\r\n");
+      out.write("        <form class=\"form-search\" action=\"#\">\r\n");
+      out.write("            <label>名称：</label> <input type=\"text\" name=\"search_LIKE_title\" class=\"input-medium\"\r\n");
+      out.write("                                      value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.search_LIKE_title}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\"> \r\n");
-      out.write("\t\t\t\t<button type=\"submit\" class=\"btn\" id=\"search_btn\">Search</button>\r\n");
-      out.write("\t\t    </form>\r\n");
-      out.write("\t    </div>\r\n");
-      out.write("\t    ");
+      out.write("\">\r\n");
+      out.write("            <button type=\"submit\" class=\"btn\" id=\"search_btn\">Search</button>\r\n");
+      out.write("        </form>\r\n");
+      out.write("    </div>\r\n");
+      out.write("    ");
       if (_jspx_meth_tags_sort_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\t</div>\r\n");
-      out.write("\t\r\n");
-      out.write("\t<table id=\"contentTable\" class=\"table table-striped table-bordered table-condensed\">\r\n");
-      out.write("\t\t<thead><tr><th>任务</th><th>管理</th></tr></thead>\r\n");
-      out.write("\t\t<tbody>\r\n");
-      out.write("\t\t");
+      out.write("</div>\r\n");
+      out.write("\r\n");
+      out.write("<table id=\"contentTable\" class=\"table table-striped table-bordered table-condensed\">\r\n");
+      out.write("    <thead>\r\n");
+      out.write("    <tr>\r\n");
+      out.write("        <th>任务</th>\r\n");
+      out.write("        <th>管理</th>\r\n");
+      out.write("    </tr>\r\n");
+      out.write("    </thead>\r\n");
+      out.write("    <tbody>\r\n");
+      out.write("    ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\t\t</tbody>\r\n");
-      out.write("\t</table>\r\n");
-      out.write("\t\r\n");
-      out.write("\t");
+      out.write("    </tbody>\r\n");
+      out.write("</table>\r\n");
+      out.write("\r\n");
       if (_jspx_meth_tags_pagination_0(_jspx_page_context))
         return;
       out.write("\r\n");
       out.write("\r\n");
-      out.write("\t<div><a class=\"btn\" href=\"");
+      out.write("<div><a class=\"btn\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/task/create\">创建任务</a></div>\r\n");
       out.write("</body>\r\n");
@@ -160,10 +164,11 @@ public final class taskList_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("\t\t<div id=\"message\" class=\"alert alert-success\"><button data-dismiss=\"alert\" class=\"close\">×</button>");
+        out.write("    <div id=\"message\" class=\"alert alert-success\">\r\n");
+        out.write("        <button data-dismiss=\"alert\" class=\"close\">×</button>\r\n");
+        out.write("            ");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${message}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("</div>\r\n");
-        out.write("\t");
         int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -207,8 +212,8 @@ public final class taskList_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\r\n");
-          out.write("\t\t\t<tr>\r\n");
-          out.write("\t\t\t\t<td><a href=\"");
+          out.write("        <tr>\r\n");
+          out.write("            <td><a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("/task/update/");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${task.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
@@ -216,13 +221,13 @@ public final class taskList_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write('>');
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${task.title}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("</a></td>\r\n");
-          out.write("\t\t\t\t<td><a href=\"");
+          out.write("            <td><a href=\"");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("/task/delete/");
           out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${task.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
           out.write("\">删除</a></td>\r\n");
-          out.write("\t\t\t</tr>\r\n");
-          out.write("\t\t");
+          out.write("        </tr>\r\n");
+          out.write("    ");
           int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;

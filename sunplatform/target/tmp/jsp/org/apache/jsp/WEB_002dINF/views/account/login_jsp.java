@@ -4,8 +4,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
-import org.apache.shiro.authc.ExcessiveAttemptsException;
-import org.apache.shiro.authc.IncorrectCredentialsException;
 
 public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -57,66 +55,69 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       if (_jspx_meth_c_set_0(_jspx_page_context))
         return;
       out.write("\r\n");
       out.write("\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
-      out.write("\t<title>登录页</title>\r\n");
+      out.write("    <title>登录页</title>\r\n");
       out.write("</head>\r\n");
       out.write("\r\n");
       out.write("<body>\r\n");
-      out.write("\t<form id=\"loginForm\" action=\"");
+      out.write("<form id=\"loginForm\" action=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/login\" method=\"post\" class=\"form-horizontal\">\r\n");
-      out.write("\t");
+      out.write("    ");
 
-	String error = (String) request.getAttribute(FormAuthenticationFilter.DEFAULT_ERROR_KEY_ATTRIBUTE_NAME);
-	if(error != null){
-	
+        String error = (String) request.getAttribute(FormAuthenticationFilter.DEFAULT_ERROR_KEY_ATTRIBUTE_NAME);
+        if (error != null) {
+    
       out.write("\r\n");
-      out.write("\t\t<div class=\"alert alert-error input-medium controls\">\r\n");
-      out.write("\t\t\t<button class=\"close\" data-dismiss=\"alert\">×</button>登录失败，请重试.\r\n");
-      out.write("\t\t</div>\r\n");
-      out.write("\t");
+      out.write("    <div class=\"alert alert-error input-medium controls\">\r\n");
+      out.write("        <button class=\"close\" data-dismiss=\"alert\">×</button>\r\n");
+      out.write("        登录失败，请重试.\r\n");
+      out.write("    </div>\r\n");
+      out.write("    ");
 
-	}
-	
+        }
+    
       out.write("\r\n");
-      out.write("\t\t<div class=\"control-group\">\r\n");
-      out.write("\t\t\t<label for=\"username\" class=\"control-label\">名称:</label>\r\n");
-      out.write("\t\t\t<div class=\"controls\">\r\n");
-      out.write("\t\t\t\t<input type=\"text\" id=\"username\" name=\"username\"  value=\"");
+      out.write("    <div class=\"control-group\">\r\n");
+      out.write("        <label for=\"username\" class=\"control-label\">名称:</label>\r\n");
+      out.write("\r\n");
+      out.write("        <div class=\"controls\">\r\n");
+      out.write("            <input type=\"text\" id=\"username\" name=\"username\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${username}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\" class=\"input-medium required\"/>\r\n");
-      out.write("\t\t\t</div>\r\n");
-      out.write("\t\t</div>\r\n");
-      out.write("\t\t<div class=\"control-group\">\r\n");
-      out.write("\t\t\t<label for=\"password\" class=\"control-label\">密码:</label>\r\n");
-      out.write("\t\t\t<div class=\"controls\">\r\n");
-      out.write("\t\t\t\t<input type=\"password\" id=\"password\" name=\"password\" class=\"input-medium required\"/>\r\n");
-      out.write("\t\t\t</div>\r\n");
-      out.write("\t\t</div>\r\n");
-      out.write("\t\t\t\t\r\n");
-      out.write("\t\t<div class=\"control-group\">\r\n");
-      out.write("\t\t\t<div class=\"controls\">\r\n");
-      out.write("\t\t\t\t<label class=\"checkbox\" for=\"rememberMe\"><input type=\"checkbox\" id=\"rememberMe\" name=\"rememberMe\"/> 记住我</label>\r\n");
-      out.write("\t\t\t\t<input id=\"submit_btn\" class=\"btn btn-primary\" type=\"submit\" value=\"登录\"/> <a class=\"btn\" href=\"");
+      out.write("        </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("    <div class=\"control-group\">\r\n");
+      out.write("        <label for=\"password\" class=\"control-label\">密码:</label>\r\n");
+      out.write("\r\n");
+      out.write("        <div class=\"controls\">\r\n");
+      out.write("            <input type=\"password\" id=\"password\" name=\"password\" class=\"input-medium required\"/>\r\n");
+      out.write("        </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("\r\n");
+      out.write("    <div class=\"control-group\">\r\n");
+      out.write("        <div class=\"controls\">\r\n");
+      out.write("            <label class=\"checkbox\" for=\"rememberMe\"><input type=\"checkbox\" id=\"rememberMe\" name=\"rememberMe\"/>\r\n");
+      out.write("                记住我</label>\r\n");
+      out.write("            <input id=\"submit_btn\" class=\"btn btn-primary\" type=\"submit\" value=\"登录\"/> <a class=\"btn\"\r\n");
+      out.write("                                                                                         href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/register\">注册</a>\r\n");
-      out.write("\t\t\t \t<span class=\"help-block\">(管理员: <b>admin/admin</b>, 普通用户: <b>user/user</b>)</span>\r\n");
-      out.write("\t\t\t</div>\r\n");
-      out.write("\t\t</div>\r\n");
-      out.write("\t</form>\r\n");
+      out.write("            <span class=\"help-block\">(管理员: <b>admin/admin</b>, 普通用户: <b>user/user</b>)</span>\r\n");
+      out.write("        </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("</form>\r\n");
       out.write("\r\n");
-      out.write("\t<script>\r\n");
-      out.write("\t\t$(document).ready(function() {\r\n");
-      out.write("\t\t\t$(\"#loginForm\").validate();\r\n");
-      out.write("\t\t});\r\n");
-      out.write("\t</script>\r\n");
+      out.write("<script>\r\n");
+      out.write("    $(document).ready(function () {\r\n");
+      out.write("        $(\"#loginForm\").validate();\r\n");
+      out.write("    });\r\n");
+      out.write("</script>\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");
     } catch (Throwable t) {

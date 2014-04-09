@@ -94,74 +94,74 @@ public final class pagination_tag
       out.write("\r\n");
       out.write("\r\n");
 
-int current =  page.getNumber() + 1;
-int begin = Math.max(1, current - paginationSize/2);
-int end = Math.min(begin + (paginationSize - 1), page.getTotalPages());
+    int current = page.getNumber() + 1;
+    int begin = Math.max(1, current - paginationSize / 2);
+    int end = Math.min(begin + (paginationSize - 1), page.getTotalPages());
 
-request.setAttribute("current", current);
-request.setAttribute("begin", begin);
-request.setAttribute("end", end);
+    request.setAttribute("current", current);
+    request.setAttribute("begin", begin);
+    request.setAttribute("end", end);
 
       out.write("\r\n");
       out.write("\r\n");
       out.write("<div class=\"pagination\">\r\n");
-      out.write("\t<ul>\r\n");
-      out.write("\t\t ");
- if (page.hasPreviousPage()){
+      out.write("    <ul>\r\n");
+      out.write("        ");
+ if (page.hasPreviousPage()) {
       out.write("\r\n");
-      out.write("               \t<li><a href=\"?page=1&sortType=");
+      out.write("        <li><a href=\"?page=1&sortType=");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sortType}", java.lang.String.class, (PageContext)this.getJspContext(), null));
       out.write('&');
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${searchParams}", java.lang.String.class, (PageContext)this.getJspContext(), null));
       out.write("\">&lt;&lt;</a></li>\r\n");
-      out.write("                <li><a href=\"?page=");
+      out.write("        <li><a href=\"?page=");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${current-1}", java.lang.String.class, (PageContext)this.getJspContext(), null));
       out.write("&sortType=");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sortType}", java.lang.String.class, (PageContext)this.getJspContext(), null));
       out.write('&');
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${searchParams}", java.lang.String.class, (PageContext)this.getJspContext(), null));
       out.write("\">&lt;</a></li>\r\n");
-      out.write("         ");
-}else{
+      out.write("        ");
+} else {
       out.write("\r\n");
-      out.write("                <li class=\"disabled\"><a href=\"#\">&lt;&lt;</a></li>\r\n");
-      out.write("                <li class=\"disabled\"><a href=\"#\">&lt;</a></li>\r\n");
-      out.write("         ");
+      out.write("        <li class=\"disabled\"><a href=\"#\">&lt;&lt;</a></li>\r\n");
+      out.write("        <li class=\"disabled\"><a href=\"#\">&lt;</a></li>\r\n");
+      out.write("        ");
 } 
       out.write("\r\n");
-      out.write(" \r\n");
-      out.write("\t\t");
+      out.write("\r\n");
+      out.write("        ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\t  \r\n");
-      out.write("\t  \t ");
- if (page.hasNextPage()){
       out.write("\r\n");
-      out.write("               \t<li><a href=\"?page=");
+      out.write("        ");
+ if (page.hasNextPage()) {
+      out.write("\r\n");
+      out.write("        <li><a href=\"?page=");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${current+1}", java.lang.String.class, (PageContext)this.getJspContext(), null));
       out.write("&sortType=");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sortType}", java.lang.String.class, (PageContext)this.getJspContext(), null));
       out.write('&');
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${searchParams}", java.lang.String.class, (PageContext)this.getJspContext(), null));
       out.write("\">&gt;</a></li>\r\n");
-      out.write("                <li><a href=\"?page=");
+      out.write("        <li><a href=\"?page=");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${page.totalPages}", java.lang.String.class, (PageContext)this.getJspContext(), null));
       out.write("&sortType=");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sortType}", java.lang.String.class, (PageContext)this.getJspContext(), null));
       out.write('&');
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${searchParams}", java.lang.String.class, (PageContext)this.getJspContext(), null));
       out.write("\">&gt;&gt;</a></li>\r\n");
-      out.write("         ");
-}else{
+      out.write("        ");
+} else {
       out.write("\r\n");
-      out.write("                <li class=\"disabled\"><a href=\"#\">&gt;</a></li>\r\n");
-      out.write("                <li class=\"disabled\"><a href=\"#\">&gt;&gt;</a></li>\r\n");
-      out.write("         ");
+      out.write("        <li class=\"disabled\"><a href=\"#\">&gt;</a></li>\r\n");
+      out.write("        <li class=\"disabled\"><a href=\"#\">&gt;&gt;</a></li>\r\n");
+      out.write("        ");
 } 
       out.write("\r\n");
       out.write("\r\n");
-      out.write("\t</ul>\r\n");
+      out.write("    </ul>\r\n");
       out.write("</div>\r\n");
       out.write("\r\n");
     } catch( Throwable t ) {

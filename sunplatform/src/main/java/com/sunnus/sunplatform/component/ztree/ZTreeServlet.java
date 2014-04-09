@@ -1,31 +1,26 @@
 package com.sunnus.sunplatform.component.ztree;
 
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import net.sf.json.JSONArray;
 import net.sf.json.JsonConfig;
 import net.sf.json.processors.JsonBeanProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
- * Created by eclipse.
- * User: tanghengqiang
- * Date: 2010-12-27
- * Time: 14:48:23
  * 树节点
  */
 public class ZTreeServlet extends HttpServlet {
 
-    private static Logger logger = LoggerFactory.getLogger(ZTreeServlet.class);
+    private static final Logger logger = LoggerFactory.getLogger(ZTreeServlet.class);
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Map<String, String> paramMap = new HashMap<String, String>();

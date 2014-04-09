@@ -76,7 +76,7 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
-      out.write("  \r\n");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
       if (_jspx_meth_c_set_0(_jspx_page_context))
@@ -86,46 +86,47 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
-      out.write("<title>QuickStart示例:");
+      out.write("    <title>QuickStart示例:");
       if (_jspx_meth_sitemesh_title_0(_jspx_page_context))
         return;
       out.write("</title>\r\n");
-      out.write("<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\" />\r\n");
-      out.write("<meta http-equiv=\"Cache-Control\" content=\"no-store\" />\r\n");
-      out.write("<meta http-equiv=\"Pragma\" content=\"no-cache\" />\r\n");
-      out.write("<meta http-equiv=\"Expires\" content=\"0\" />\r\n");
+      out.write("    <meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\"/>\r\n");
+      out.write("    <meta http-equiv=\"Cache-Control\" content=\"no-store\"/>\r\n");
+      out.write("    <meta http-equiv=\"Pragma\" content=\"no-cache\"/>\r\n");
+      out.write("    <meta http-equiv=\"Expires\" content=\"0\"/>\r\n");
       out.write("\r\n");
-      out.write("<link type=\"image/x-icon\" href=\"");
+      out.write("    <link type=\"image/x-icon\" href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/static/images/favicon.ico\" rel=\"shortcut icon\">\r\n");
-      out.write("<link href=\"");
+      out.write("    <link href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/static/bootstrap/2.3.2/css/bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\" />\r\n");
-      out.write("<link href=\"");
+      out.write("/static/bootstrap/2.3.2/css/bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\"/>\r\n");
+      out.write("    <link href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/static/jquery-validation/1.11.1/validate.css\" type=\"text/css\" rel=\"stylesheet\" />\r\n");
-      out.write("<link href=\"");
+      out.write("/static/jquery-validation/1.11.1/validate.css\" type=\"text/css\" rel=\"stylesheet\"/>\r\n");
+      out.write("    <link href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("/static/styles/default.css\" type=\"text/css\" rel=\"stylesheet\" />\r\n");
-      out.write("<script src=\"");
+      out.write("/static/styles/default.css\" type=\"text/css\" rel=\"stylesheet\"/>\r\n");
+      out.write("    <script src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/static/jquery/jquery-1.9.1.min.js\" type=\"text/javascript\"></script>\r\n");
-      out.write("<script src=\"");
+      out.write("    <script src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/static/jquery-validation/1.11.1/jquery.validate.min.js\" type=\"text/javascript\"></script>\r\n");
-      out.write("<script src=\"");
+      out.write("    <script src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/static/jquery-validation/1.11.1/messages_bs_zh.js\" type=\"text/javascript\"></script>\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("    ");
       if (_jspx_meth_sitemesh_head_0(_jspx_page_context))
         return;
       out.write("\r\n");
       out.write("</head>\r\n");
       out.write("\r\n");
       out.write("<body>\r\n");
-      out.write("\t<div class=\"container\">\r\n");
-      out.write("\t\t");
+      out.write("<div class=\"container\">\r\n");
+      out.write("    ");
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -133,33 +134,34 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       out.write("\r\n");
       out.write("<div id=\"header\">\r\n");
-      out.write("\t<div id=\"title\">\r\n");
-      out.write("\t    <h1><a href=\"");
+      out.write("    <div id=\"title\">\r\n");
+      out.write("        <h1><a href=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("\">QuickStart示例</a><small>--TodoList应用演示</small>\r\n");
-      out.write("\t    ");
+      out.write("\">QuickStart示例</a>\r\n");
+      out.write("            <small>--TodoList应用演示</small>\r\n");
+      out.write("            ");
       if (_jspx_meth_shiro_user_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\t\t</h1>\r\n");
-      out.write("\t</div>\r\n");
+      out.write("        </h1>\r\n");
+      out.write("    </div>\r\n");
       out.write("</div>");
       out.write("\r\n");
-      out.write("\t\t<div id=\"content\">\r\n");
-      out.write("\t\t\t");
+      out.write("    <div id=\"content\">\r\n");
+      out.write("        ");
       if (_jspx_meth_sitemesh_body_0(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\t\t</div>\r\n");
-      out.write("\t\t");
+      out.write("    </div>\r\n");
+      out.write("    ");
       out.write("\r\n");
       out.write("<div id=\"footer\">\r\n");
-      out.write("\tCopyright &copy; 2005-2012 <a href=\"http://www.springside.org.cn\">springside.org.cn</a>\r\n");
+      out.write("    Copyright &copy; 2005-2012 <a href=\"http://www.springside.org.cn\">springside.org.cn</a>\r\n");
       out.write("</div>\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("\t</div>\r\n");
-      out.write("\t<script src=\"");
+      out.write("</div>\r\n");
+      out.write("<script src=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("/static/bootstrap/2.3.2/js/bootstrap.min.js\" type=\"text/javascript\"></script>\r\n");
       out.write("</body>\r\n");
@@ -261,32 +263,32 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_shiro_user_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("\t\t\t<div class=\"btn-group pull-right\">\r\n");
-        out.write("\t\t\t\t<a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\r\n");
-        out.write("\t\t\t\t\t<i class=\"icon-user\"></i> ");
+        out.write("                <div class=\"btn-group pull-right\">\r\n");
+        out.write("                    <a class=\"btn dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">\r\n");
+        out.write("                        <i class=\"icon-user\"></i> ");
         if (_jspx_meth_shiro_principal_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_shiro_user_0, _jspx_page_context))
           return true;
         out.write("\r\n");
-        out.write("\t\t\t\t\t<span class=\"caret\"></span>\r\n");
-        out.write("\t\t\t\t</a>\r\n");
-        out.write("\t\t\t\r\n");
-        out.write("\t\t\t\t<ul class=\"dropdown-menu\">\r\n");
-        out.write("\t\t\t\t\t");
+        out.write("                        <span class=\"caret\"></span>\r\n");
+        out.write("                    </a>\r\n");
+        out.write("\r\n");
+        out.write("                    <ul class=\"dropdown-menu\">\r\n");
+        out.write("                        ");
         if (_jspx_meth_shiro_hasRole_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_shiro_user_0, _jspx_page_context))
           return true;
         out.write("\r\n");
-        out.write("\t\t\t\t\t<li><a href=\"");
+        out.write("                        <li><a href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("/api\">APIs</a></li>\r\n");
-        out.write("\t\t\t\t\t<li><a href=\"");
+        out.write("                        <li><a href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("/profile\">Edit Profile</a></li>\r\n");
-        out.write("\t\t\t\t\t<li><a href=\"");
+        out.write("                        <li><a href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("/logout\">Logout</a></li>\r\n");
-        out.write("\t\t\t\t</ul>\r\n");
-        out.write("\t\t\t</div>\r\n");
-        out.write("\t\t");
+        out.write("                    </ul>\r\n");
+        out.write("                </div>\r\n");
+        out.write("            ");
         int evalDoAfterBody = _jspx_th_shiro_user_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
@@ -331,11 +333,11 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
     if (_jspx_eval_shiro_hasRole_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("\t\t\t\t\t\t<li><a href=\"");
+        out.write("                            <li><a href=\"");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ctx}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write("/admin/user\">Admin Users</a></li>\r\n");
-        out.write("\t\t\t\t\t\t<li class=\"divider\"></li>\r\n");
-        out.write("\t\t\t\t\t");
+        out.write("                            <li class=\"divider\"></li>\r\n");
+        out.write("                        ");
         int evalDoAfterBody = _jspx_th_shiro_hasRole_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;
